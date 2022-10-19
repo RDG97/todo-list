@@ -1,7 +1,18 @@
+import { useState, useEffect } from "react";
+import Board from "./Board"
+import Todo from "./EnterTodo"
+
+
+
+
+
 export default function App() {
+    
+    
     return (
         <>
-        <div className="container-fluid bg-primary" ><p>help</p></div>
+        <Board />
+        <Todo />
         </>
     )
 }
