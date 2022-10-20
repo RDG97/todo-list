@@ -5,12 +5,15 @@ let list = []
 export default function Board() {
 
     const [items, setItems] = useState([]);
+    const [data, setData] = useState([]);
     let x = 0
+    
     for (let i = 0; i < localStorage.length; i++) {
         x++
         list.push([localStorage.getItem(`todo${x}`) , x , 'comingup'])
         console.log('list', list)
     }
+
     let commers = list.filter(lis =>
         lis[2] === 'comingup'
         );
@@ -21,11 +24,11 @@ export default function Board() {
         console.log('test', commers)
 
     
-    console.log('another test', todos)
-    console.log('please', list[0][2])
+        console.log('another test', todos)
+    
 
-        function test(index) {
-            list[index][2] = 'Todo'
+        function test(index, props) {
+            setData(props[index][2] = 'Todo')
             console.log('test func', list)
             
              
